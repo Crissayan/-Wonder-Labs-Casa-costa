@@ -1,0 +1,60 @@
+{
+  "frame": "167:1620",
+  "path": "/faqs",
+  "viewport": {
+    "width": 393,
+    "height": 852
+  },
+  "state": "acordeon-closed",
+  "boxes": {
+    "faq-banner": {
+      "x": 0,
+      "y": 57,
+      "width": 393,
+      "height": 245,
+      "compare": [
+        "x",
+        "y",
+        "width"
+      ]
+    },
+    "acordeon": {
+      "x": 27,
+      "y": 0,
+      "width": 339,
+      "height": 51,
+      "compare": [
+        "x",
+        "width"
+      ]
+    },
+    "footer": {
+      "x": 0,
+      "y": 0,
+      "width": 393,
+      "height": 373,
+      "compare": [
+        "x",
+        "width",
+        "height"
+      ]
+    },
+    "whatsapp": {
+      "x": 299,
+      "y": 0,
+      "width": 63,
+      "height": 63,
+      "compare": [
+        "x",
+        "width",
+        "height"
+      ]
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 393,
+      "height": 57
+    }
+  }
+}

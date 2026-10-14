@@ -1,0 +1,11 @@
+{
+  "frame": "270:32",
+  "path": "/",
+  "viewport": { "width": 393, "height": 852 },
+  "state": "menu-abierto",
+  "actions": [{ "click": "[data-fv=\"header-menu\"]", "waitFor": "[data-fv=\"menu-panel\"]" }],
+  "boxes": {
+    "menu-panel": { "x": 168, "y": 0, "width": 225, "height": 852, "compare": ["x", "y", "width"] },
+    "menu-reservar": { "x": 252, "y": 0, "width": 121, "height": 33, "compare": ["x", "width", "height"] }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "frame": "514:710",
+  "path": "/experiencias",
+  "viewport": { "width": 1456, "height": 900 },
+  "state": "popup-plan",
+  "actions": [{ "click": "[data-fv=\"plan-card-activa\"]", "waitFor": "[data-fv=\"popup-plan-imagen\"]" }],
+  "origin": "[data-fv=\"popup-plan-tarjeta\"]",
+  "boxes": {
+    "popup-plan-tarjeta": { "x": 0, "y": 0, "width": 1318, "height": 615 },
+    "popup-plan-imagen": { "x": 72, "y": 51, "width": 422, "height": 507, "compare": ["x", "width", "height"] },
+    "cerrar": { "x": 1285, "y": -33, "width": 66, "height": 66 }
+  }
+}

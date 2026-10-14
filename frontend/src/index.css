@@ -1,0 +1,36 @@
+/* Fuentes reales auto-alojadas (FV-06, research D-03): solo los pesos usados en los frames. */
+@import '@fontsource/inter/300.css';
+@import '@fontsource/inter/300-italic.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/500-italic.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/600-italic.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/inter/700-italic.css';
+@import '@fontsource/inter/800.css';
+@import '@fontsource/nunito/500.css';
+@import '@fontsource/nunito/700.css';
+@import '@fontsource/nunito/700-italic.css';
+@import '@fontsource/nunito/800.css';
+@import '@fontsource/nunito/900.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Oculta la barra de desplazamiento de los carruseles deslizables sin perder el scroll. */
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}

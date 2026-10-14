@@ -1,0 +1,13 @@
+{
+  "frame": "27:38",
+  "path": "/como-llegar",
+  "viewport": { "width": 1456, "height": 900 },
+  "state": "default",
+  "boxes": {
+    "cl-banner": { "x": 0, "y": 118, "width": 1456, "height": 407, "compare": ["x", "y", "width"] },
+    "cl-via-directa": { "x": 98, "y": 0, "width": 1261, "height": 303, "compare": ["x", "width"] },
+    "cl-ruta-mixta": { "x": 98, "y": 0, "width": 1261, "height": 756, "compare": ["x", "width"] },
+    "cl-boton-vuelo": { "x": 582, "y": 0, "width": 306, "height": 49, "compare": ["width", "height"] },
+    "cl-boton-lancha": { "x": 562, "y": 0, "width": 306, "height": 49, "compare": ["width", "height"] }
+  }
+}

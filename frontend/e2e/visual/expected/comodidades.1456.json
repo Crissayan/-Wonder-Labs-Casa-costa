@@ -1,0 +1,14 @@
+{
+  "frame": "27:16",
+  "path": "/comodidades",
+  "viewport": { "width": 1456, "height": 900 },
+  "state": "default",
+  "boxes": {
+    "com-banner": { "x": 0, "y": 118, "width": 1456, "height": 402 },
+    "habitacion-tarjeta": { "x": 137, "y": 0, "width": 580, "height": 580, "compare": ["x", "width", "height"] },
+    "habitacion-imagen": { "x": 164, "y": 0, "width": 526, "height": 331, "compare": ["x", "width", "height"] },
+    "habitacion-miniatura-1": { "x": 792, "y": 0, "width": 170, "height": 156, "compare": ["x", "width", "height"] },
+    "habitacion-miniatura-3": { "x": 1171, "y": 0, "width": 169, "height": 156, "compare": ["x", "width", "height"] },
+    "com-alimentacion": { "x": 0, "y": 0, "width": 1456, "height": 862, "compare": ["x", "width"] }
+  }
+}

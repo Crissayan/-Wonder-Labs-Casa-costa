@@ -1,0 +1,20 @@
+{
+  "name": "hotel-casacosta",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "db:build": "npm run db:build -w backend",
+    "dev": "npm run db:build && concurrently -n api,web -c blue,yellow \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run db:build && npm run build -w backend && npm run build -w frontend",
+    "start": "npm run start -w backend",
+    "test": "npm run db:build && npm run test -w backend && npm run test -w frontend",
+    "test:e2e": "npm run test:e2e -w frontend",
+    "test:visual": "npm run test:visual -w frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

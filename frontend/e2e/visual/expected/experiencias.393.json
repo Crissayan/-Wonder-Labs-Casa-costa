@@ -1,0 +1,13 @@
+{
+  "frame": "167:162",
+  "path": "/experiencias",
+  "viewport": { "width": 393, "height": 852 },
+  "state": "default",
+  "boxes": {
+    "header": { "x": 0, "y": 0, "width": 393, "height": 57 },
+    "exp-banner": { "x": 0, "y": 57, "width": 393, "height": 172 },
+    "plan-card-mobile": { "x": 90, "y": 0, "width": 212, "height": 254, "compare": ["x", "width", "height"] },
+    "exp-banner-tours": { "x": 0, "y": 0, "width": 393, "height": 162, "compare": ["x", "width", "height"] },
+    "exp-destino-playa-la-miel-imagen": { "x": 56, "y": 0, "width": 281, "height": 188, "compare": ["x", "width", "height"] }
+  }
+}

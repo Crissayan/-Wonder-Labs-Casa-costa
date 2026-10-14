@@ -1,0 +1,15 @@
+{
+  "frame": "14:39",
+  "path": "/experiencias",
+  "viewport": { "width": 1456, "height": 900 },
+  "state": "default",
+  "boxes": {
+    "header": { "x": 0, "y": 0, "width": 1456, "height": 118 },
+    "exp-banner": { "x": 0, "y": 118, "width": 1456, "height": 402 },
+    "plan-card-activa": { "x": 456, "y": 0, "width": 533, "height": 641, "compare": ["x", "width", "height"] },
+    "exp-banner-tours": { "x": 0, "y": 0, "width": 1456, "height": 323, "compare": ["x", "width", "height"] },
+    "exp-destino-playa-la-miel-imagen": { "x": 81, "y": 0, "width": 496, "height": 332, "compare": ["x", "width", "height"] },
+    "exp-destino-bahia-sapzurro-imagen": { "x": 80, "y": 0, "width": 496, "height": 332, "compare": ["x", "width", "height"] },
+    "exp-destino-cabo-tiburon-imagen": { "x": 81, "y": 0, "width": 496, "height": 332, "compare": ["x", "width", "height"] }
+  }
+}

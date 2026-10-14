@@ -1,0 +1,15 @@
+{
+  "frame": "12:2",
+  "path": "/",
+  "viewport": { "width": 1456, "height": 900 },
+  "state": "default",
+  "boxes": {
+    "ini-hero": { "x": 0, "y": 120, "width": 1456, "height": 560 },
+    "ini-foto-1": { "x": 135, "y": 0, "width": 366, "height": 322, "compare": ["x", "width", "height"] },
+    "ini-foto-3": { "x": 955, "y": 0, "width": 366, "height": 322, "compare": ["x", "width", "height"] },
+    "ini-tours": { "x": 0, "y": 0, "width": 1456, "height": 585, "compare": ["x", "width", "height"] },
+    "ini-tours-imagen": { "x": 917, "y": 0, "width": 416, "height": 512, "compare": ["x", "width", "height"] },
+    "resena-activa": { "x": 607, "y": 0, "width": 242, "height": 182, "compare": ["x", "width", "height"] },
+    "cta": { "x": 0, "y": 0, "width": 1456, "height": 511, "compare": ["x", "width", "height"] }
+  }
+}

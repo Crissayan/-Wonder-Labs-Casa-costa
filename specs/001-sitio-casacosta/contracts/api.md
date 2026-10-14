@@ -75,8 +75,8 @@ Base: `/api`. Constitución v1.3.0 ("Contrato de la API") + spec (Anexo A). Tipo
     "instagram": "@hotelcasacosta_",
     "instagramUrl": "https://www.instagram.com/hotelcasacosta_/",
     "bookingUrl": "https://www.booking.com/hotel/co/casa-costa.es.html",
-    "vueloUrl": null,
-    "busUrl": null,
+    "vueloUrl": "https://moonflights.com.co/servicios/vuelos-ch%C3%A1rter/14",
+    "busUrl": "https://www.redbus.co/pasajes-de-bus/medellin-a-necocli-ant",
     "direccion": "Calle la Arrocera, 278017, Capurganá Colombia"
   }
 }

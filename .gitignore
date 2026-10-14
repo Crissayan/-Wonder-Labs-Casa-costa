@@ -1,0 +1,15 @@
+node_modules/
+dist/
+build/
+*.log
+.env*
+db/casacosta.db
+db/casacosta.db-*
+frontend/e2e/visual/output/
+frontend/test-results/
+frontend/playwright-report/
+.DS_Store
+Thumbs.db
+*.tmp
+.vscode/
+.idea/

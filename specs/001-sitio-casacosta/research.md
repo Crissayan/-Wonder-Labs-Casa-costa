@@ -122,9 +122,9 @@ No quedan puntos "NEEDS CLARIFICATION" en el Technical Context.
 - **Decision**: `seed.sql` toma los datos de la constitución ("Contenido confirmado") y el resto
   de los textos de los frames de Figma, con las erratas de P-15 corregidas. El inventario está en
   [data-model.md](./data-model.md#contenido-semilla).
-- **Pendientes sin fuente (no se inventan, Principio VII):** valores de `vuelo_url` (Moon
-  Flights chárter) y `bus_url` (redBus Medellín–Necoclí) — la constitución nombra el servicio pero
-  no la URL; duración de algunos planes/promociones y textos de habitaciones y reseñas, que se
+- **Actualización (implementación):** `vuelo_url` y `bus_url` se encontraron como enlaces de los
+  botones de Cómo llegar en Figma (27:38, 167:1501) y se guardan limpios (P-19).
+- **Pendientes sin fuente (no se inventan, Principio VII):** duración de algunos planes/promociones y textos de habitaciones y reseñas, que se
   leen del frame correspondiente al escribir el seed. Mientras falte una URL, su botón no se
   muestra (CB-01).
 - **Rationale**: Mantiene la trazabilidad de cada dato.

@@ -1,0 +1,12 @@
+{
+  "frame": "344:362",
+  "path": "/",
+  "viewport": { "width": 393, "height": 852 },
+  "state": "popup-resena",
+  "actions": [{ "scrollTo": "[data-fv=\"resena-mobile\"]", "click": "[data-fv=\"resena-mobile\"] button", "waitFor": "[data-fv=\"popup-resena-tarjeta\"]" }],
+  "origin": "[data-fv=\"popup-resena-tarjeta\"]",
+  "boxes": {
+    "popup-resena-tarjeta": { "x": 0, "y": 0, "width": 269, "height": 317, "compare": ["x", "y", "width"] },
+    "cerrar": { "x": 243, "y": -17, "width": 40, "height": 40 }
+  }
+}

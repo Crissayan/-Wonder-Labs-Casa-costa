@@ -1,0 +1,12 @@
+{
+  "frame": "454:1690",
+  "path": "/",
+  "viewport": { "width": 1456, "height": 900 },
+  "state": "popup-resena",
+  "actions": [{ "click": "[data-fv=\"resena-activa\"] button", "waitFor": "[data-fv=\"popup-resena-tarjeta\"]" }],
+  "origin": "[data-fv=\"popup-resena-tarjeta\"]",
+  "boxes": {
+    "popup-resena-tarjeta": { "x": 0, "y": 0, "width": 458, "height": 385 },
+    "cerrar": { "x": 413, "y": -21, "width": 67, "height": 67 }
+  }
+}

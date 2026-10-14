@@ -1,0 +1,12 @@
+{
+  "frame": "158:182",
+  "path": "/",
+  "viewport": { "width": 393, "height": 852 },
+  "state": "default",
+  "boxes": {
+    "ini-hero": { "x": 0, "y": 57, "width": 393, "height": 489 },
+    "ini-tours-imagen": { "x": 27, "y": 0, "width": 339, "height": 450, "compare": ["x", "width", "height"] },
+    "resena-mobile": { "x": 62, "y": 0, "width": 269, "height": 205, "compare": ["x", "width", "height"] },
+    "cta": { "x": 0, "y": 0, "width": 393, "height": 509, "compare": ["x", "width", "height"] }
+  }
+}

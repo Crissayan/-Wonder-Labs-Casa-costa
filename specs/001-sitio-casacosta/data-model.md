@@ -94,18 +94,18 @@ corregidas. `—` = pendiente sin fuente (D-11).
 | `instagram_url` | `https://www.instagram.com/hotelcasacosta_/` | C (P-21) |
 | `booking_url` | `https://www.booking.com/hotel/co/casa-costa.es.html` | S |
 | `direccion` | `Calle la Arrocera, 278017, Capurganá Colombia` | F (footer) |
-| `vuelo_url` | — (Moon Flights chárter) | Pendiente |
-| `bus_url` | — (redBus Medellín–Necoclí) | Pendiente |
+| `vuelo_url` | `https://moonflights.com.co/servicios/vuelos-ch%C3%A1rter/14` | F (27:38; limpio según P-19, tilde recodificada) |
+| `bus_url` | `https://www.redbus.co/pasajes-de-bus/medellin-a-necocli-ant` | F (167:1501; sin parámetros de rastreo, P-19) |
 
 ### `planes`
 
 | slug | nombre | categoria | duración | precio_normal | temporada_baja | Fuente |
 |---|---|---|---|---|---|---|
 | `plan-conoce-capurgana` | Plan Conoce Capurganá | plan | 3 | 600000 | NULL | F (369:541), S |
-| `plan-capurgana-intrepida` | Plan Capurganá Intrépida | plan | F | 1100000 | 980000 | C (P-02) |
+| `plan-capurgana-intrepida` | Plan Capurganá Intrépida | plan | 4 | 1100000 | 980000 | C (P-02) |
 | `plan-explora-capurgana` | Plan Explora Capurganá | plan | 4 | 850000 | 750000 | C (P-12) |
 | `capurgana-a-tu-ritmo` | Capurganá a tu Ritmo | promocion | 4 | 210000 | NULL | C (P-06), F (384:290) |
-| `capurgana-express` | Capurganá Express | promocion | F | 320000 | NULL | C (P-06) |
+| `capurgana-express` | Capurganá Express | promocion | 3 | 320000 | NULL | C (P-06) |
 
 Descripciones e "ideal para…": F (frames de pop-up de FR-067). "Plan Conoce Capurganá": "3 días
 inolvidables en Capurganá con transporte ida y regreso desde Necoclí, desayunos y cenas en el

@@ -1,0 +1,11 @@
+{
+  "frame": "458:423",
+  "path": "/faqs",
+  "viewport": { "width": 1456, "height": 900 },
+  "state": "acordeon-open",
+  "actions": [{ "click": "[data-fv=\"acordeon\"] button" }],
+  "origin": "[data-fv=\"acordeon\"]",
+  "boxes": {
+    "acordeon": { "x": 0, "y": 0, "width": 599, "height": 167, "compare": ["x", "y", "width"] }
+  }
+}

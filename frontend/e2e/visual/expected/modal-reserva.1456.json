@@ -1,0 +1,14 @@
+{
+  "frame": "459:550",
+  "path": "/",
+  "viewport": { "width": 1456, "height": 900 },
+  "state": "modal-abierto",
+  "actions": [{ "click": "[data-fv=\"header-reservar\"]", "waitFor": "[data-fv=\"modal-reserva-tarjeta\"]" }],
+  "origin": "[data-fv=\"modal-reserva-tarjeta\"]",
+  "boxes": {
+    "modal-reserva-tarjeta": { "x": 0, "y": 0, "width": 973, "height": 336 },
+    "cerrar": { "x": 940, "y": -33, "width": 66, "height": 66 },
+    "modal-boton-directo": { "x": 130, "y": 242, "width": 278, "height": 51 },
+    "modal-boton-booking": { "x": 569, "y": 242, "width": 278, "height": 51 }
+  }
+}

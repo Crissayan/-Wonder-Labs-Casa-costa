@@ -1,0 +1,14 @@
+{
+  "frame": "505:854",
+  "path": "/",
+  "viewport": { "width": 393, "height": 852 },
+  "state": "modal-abierto",
+  "actions": [{ "scrollTo": "[data-fv=\"cta-reservar\"]", "click": "[data-fv=\"cta-reservar\"]", "waitFor": "[data-fv=\"modal-reserva-tarjeta\"]" }],
+  "origin": "[data-fv=\"modal-reserva-tarjeta\"]",
+  "boxes": {
+    "modal-reserva-tarjeta": { "x": 0, "y": 0, "width": 327, "height": 529 },
+    "cerrar": { "x": 311, "y": -16, "width": 32, "height": 32 },
+    "modal-boton-directo": { "x": 88, "y": 273, "width": 151, "height": 32 },
+    "modal-boton-booking": { "x": 86, "y": 441, "width": 152, "height": 35, "compare": ["y"] }
+  }
+}

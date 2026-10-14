@@ -664,6 +664,9 @@ contacto configurados.
   - Rótulos "Opción 1:" / "Opción 2:" en Cómo llegar mobile (regla web, FR-040).
   - Tarjetas de plan y promoción sin itinerario, "Incluye" ni indicador de 4 puntos incrustados
     del afiche; nombre, duración y precios maquetados sobre la foto (Q-03, FR-021).
+  - **Temporal (2026-10-13):** mientras no haya fotos limpias de cada plan y promoción (Figma solo
+    trae afiches con los datos incrustados), la tarjeta usa fondo `primary` en lugar de foto; el
+    pop-up muestra el afiche de Figma. Se retira esta excepción al cargar las fotos (FR-021).
   - Estados no diseñados (carga, vacío, error, hover distinto de "Variante 2"), que usan solo
     tokens del toolkit.
 

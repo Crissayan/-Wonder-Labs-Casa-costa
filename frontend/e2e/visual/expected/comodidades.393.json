@@ -1,0 +1,11 @@
+{
+  "frame": "167:1017",
+  "path": "/comodidades",
+  "viewport": { "width": 393, "height": 852 },
+  "state": "default",
+  "boxes": {
+    "com-banner": { "x": 0, "y": 57, "width": 393, "height": 172, "compare": ["x", "y", "width"] },
+    "habitacion-tarjeta-mobile": { "x": 32, "y": 0, "width": 329, "height": 316, "compare": ["x", "width", "height"] },
+    "habitacion-imagen-mobile": { "x": 42, "y": 0, "width": 309, "height": 192, "compare": ["x", "width", "height"] }
+  }
+}
