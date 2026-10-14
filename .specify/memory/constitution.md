@@ -1,34 +1,27 @@
 <!--
 SYNC IMPACT REPORT
 ==================
-Version change: 1.1.0 → 1.1.1
-Tipo de cambio: PATCH — se cierra contenido pendiente (P-10, P-14) y se precisa P-13. No cambia
-ningún principio, regla R-xx, esquema ni contrato de API.
+Version change: 1.2.0 → 1.3.0
+Tipo de cambio: MINOR — nueva clave de configuración `instagram_url` y ampliación de R-20 con los
+enlaces del footer (decisión Q-07 de specs/001-sitio-casacosta, registrada como P-21). No se
+elimina ni redefine nada.
 
 Principios modificados: ninguno.
 
 Secciones modificadas:
-  - Preguntas Abiertas y Decisiones:
-    · "Preguntas abiertas": queda vacía (P-10 y P-14 cerradas).
-    · "Registro de decisiones": P-10 y P-14 pasan a cerradas con el contenido aprobado; P-13
-      aclara que el destino del enlace se define en el spec.md de Experiencias.
-    · "Contenido confirmado para seed.sql": 3 FAQs con respuesta; "¿Puedo llevar a mi
-      mascota?" fuera del seed; texto definitivo de introducción de Comodidades.
+  - Reglas de Dominio — R-03 (claves) y R-20 (`instagram_url`; `whatsapp_url` también en el
+    teléfono del footer; la dirección no es enlace).
+  - Contratos de Datos — comentario de claves de `configuracion`.
+  - Preguntas Abiertas y Decisiones — nueva P-21 en el registro; valor de `instagram_url` en
+    "Contenido confirmado para seed.sql".
+  - Governance — "Historial de enmiendas": fila 1.3.0.
 
-Secciones añadidas: ninguna.
-Secciones eliminadas: ninguna.
+Secciones añadidas / eliminadas: ninguna.
 
 Plantillas dependientes: sin cambios requeridos.
 
-Notas de trazabilidad:
-  - El contenido de P-10 y P-14 lo aporta el responsable del proyecto (no proviene de Figma),
-    incluidos "aproximadamente 1,5 horas" de vuelo, la "planta de energía" y la mención de
-    Bahía Aguacate en el plan Capurganá Intrépida.
-
-TODOs diferidos:
-  - "¿Puedo llevar a mi mascota?": pendiente de la política del hotel; se agregará como cambio
-    de contenido en seed.sql, sin enmendar la constitución.
-  - P-13: destino concreto del enlace a definir en el spec.md de Experiencias.
+TODOs diferidos: ninguno. Desbloquea FR-005 de specs/001-sitio-casacosta (dependencia de
+`instagram_url`).
 -->
 
 # Constitución del Proyecto — [WonderLabs] CasaCosta
@@ -95,7 +88,8 @@ los parámetros previenen inyección SQL.
 - Los estilos se escriben solo con clases de Tailwind; CSS ad-hoc únicamente en casos
   imposibles de resolver con Tailwind, justificados en el código.
 - Diseño **mobile-first**; las vistas de Figma de **393 px** (mobile) y **1456 px**
-  (escritorio) son la referencia visual obligatoria.
+  (escritorio) son la referencia visual obligatoria, con la fidelidad y tolerancias de la
+  sección "Fidelidad Visual al Diseño" (FV-01…FV-07).
 - Todo el contenido visible está en **español** (R-17).
 
 **Justificación:** garantiza fidelidad al diseño aprobado y coherencia visual entre pantallas.
@@ -137,6 +131,10 @@ los clientes de la API necesitan respuestas predecibles.
 - **Regla web:** ante discrepancias de contenido o datos entre la vista web y la mobile,
   prevalece la **versión web**, salvo las excepciones registradas en "Preguntas Abiertas y
   Decisiones" (p. ej. P-20).
+- **Fidelidad visual:** el agente DEBE cumplir FV-01…FV-07 (sección "Fidelidad Visual al
+  Diseño"): fidelidad visual total a Figma y al UI Toolkit, consulta del frame de Figma antes
+  de implementar cada pantalla (FV-05), íconos, imágenes y fuentes reales (FV-06) y ninguna
+  pantalla terminada sin verificación visual en 393 px y 1456 px (FV-07).
 
 **Justificación:** Spec-Driven Development exige que el código derive de documentos
 aprobados, no de suposiciones del implementador.
@@ -236,6 +234,38 @@ FAQ en acordeón, tarjetas de habitación (escritorio estático / mobile desliza
 de imágenes (escritorio con botones / mobile deslizable, elementos laterales con opacidad
 50 %), pop-up de planes, tarjetas de reseña.
 
+## Fidelidad Visual al Diseño
+
+Fuente visual: archivo Figma `FUuT2oETZHhIh0PIIBFDHX`, páginas "Prototipo Escritorio" (`0:1`) y
+"Prototipo Mobile" (`126:2`), y el UI Toolkit.
+
+- **FV-01.** La interfaz DEBE ser 100 % fiel al diseño de Figma y al UI Toolkit en todo lo
+  **visual**: estructura y orden de secciones, composición y alineación, tamaños y proporciones
+  de componentes e imágenes, espaciados, colores, tipografías y pesos, radios, iconografía,
+  opacidades, sombras, estados de componentes (variantes) y comportamiento de carruseles,
+  pop-ups, menú y acordeones.
+- **FV-02.** La fidelidad **NO aplica a los textos**. El contenido textual lo definen esta
+  constitución ("Reglas de Dominio", "Contenido confirmado para `seed.sql`", decisiones P-xx;
+  erratas corregidas según P-15) y `seed.sql`. Si el texto real es más largo o más corto que el
+  del diseño, el componente se adapta sin romper la composición.
+- **FV-03.** Vistas de referencia obligatorias: **393 px** y **1456 px**. Tolerancia: **±2 px**
+  en dimensiones y espaciados en esos dos anchos. Entre ambos anchos el diseño se adapta de
+  forma fluida, sin desbordes ni scroll horizontal.
+- **FV-04.** Las únicas desviaciones visuales permitidas son las registradas como excepciones
+  en esta constitución o en `spec.md` (incluidas las resoluciones por regla web del Principio
+  VII documentadas en el spec). Cualquier otra diferencia es un **defecto**.
+- **FV-05.** Antes de implementar una pantalla, el agente DEBE consultar su frame en Figma
+  (medidas, tokens y assets) en lugar de estimarlo a partir de los PDF.
+- **FV-06.** Los íconos son los de Figma (las capas `lucide/*` se implementan con
+  `lucide-react`) y las imágenes se exportan desde Figma. Las fuentes **Nunito** e **Inter**
+  DEBEN cargarse realmente; nunca se usa una fuente de respaldo como sustituto.
+- **FV-07.** Ninguna pantalla se da por terminada sin la **verificación visual** definida en
+  `spec.md`, en 393 px y 1456 px.
+
+**Justificación:** el diseño aprobado en Figma es el entregable visual; medir contra los
+frames con tolerancia explícita convierte la fidelidad en un criterio verificable en lugar de
+una apreciación subjetiva.
+
 ## Reglas de Dominio y Lógica de Negocio
 
 Reglas inmutables salvo enmienda formal de esta constitución.
@@ -248,7 +278,8 @@ Reglas inmutables salvo enmienda formal de esta constitución.
 - **R-02.** Todo CTA de reserva ("RESERVAR", "RESERVA", "RESERVA YA") abre el **mismo modal
   de selección de canal**. No existe un CTA que reserve directamente.
 - **R-03.** Los datos de contacto y enlaces (`whatsapp`, `whatsapp_url`, `instagram`,
-  `booking_url`, `vuelo_url`, `bus_url`, `direccion`, `telefono`) se leen de la tabla
+  `instagram_url`, `booking_url`, `vuelo_url`, `bus_url`, `direccion`, `telefono`) se leen de la
+  tabla
   `configuracion`; no se escriben en duro en los componentes. El canal DIRECTO usa
   `whatsapp_url`, que incluye el mensaje prellenado "Quiero más info sobre Hotel Casa Costa 🏝️".
 
@@ -308,10 +339,12 @@ Reglas inmutables salvo enmienda formal de esta constitución.
 - **R-20.** Los enlaces externos se guardan **limpios** en `configuracion` (sin parámetros de
   sesión, fechas ni rastreo) y abren en **pestaña nueva**:
   - `booking_url` — página de Casa Costa en Booking.com (canal BOOKING).
-  - `whatsapp_url` — WhatsApp con mensaje prellenado (canal DIRECTO y botón "VER MÁS" de
-    Cómo llegar).
+  - `whatsapp_url` — WhatsApp con mensaje prellenado (canal DIRECTO, botón "VER MÁS" de
+    Cómo llegar y teléfono del footer).
+  - `instagram_url` — perfil de Instagram del hotel (usuario `instagram` del footer).
   - `vuelo_url` — Moon Flights chárter ("COMPRA AHORA" / "Agenda tu vuelo").
   - `bus_url` — redBus Medellín–Necoclí ("Consulta tiquetes").
+  - La dirección del footer se muestra como texto, sin enlace.
 
 ## Contratos de Datos
 
@@ -328,7 +361,8 @@ PRAGMA foreign_keys = ON;
 -- Datos de contacto y enlaces externos (clave/valor)
 CREATE TABLE configuracion (
   clave  TEXT PRIMARY KEY,          -- 'whatsapp', 'whatsapp_url', 'instagram', 'booking_url',
-                                    -- 'vuelo_url', 'bus_url', 'direccion', 'telefono'
+                                    -- 'instagram_url', 'vuelo_url', 'bus_url', 'direccion',
+                                    -- 'telefono'
   valor  TEXT NOT NULL
 );
 
@@ -524,6 +558,7 @@ const row = getPlanBySlug.get(slug); // undefined → 404
 | P-18 | Colores sueltos en pantallas | Se usan los tokens del toolkit, no `#1C3149`, `#F9B43F`, `#282940`. Nuevo token `surface` = `#EFEFEF`. |
 | P-19 | URLs externas | Se guardan limpias (sin sesión, fechas ni rastreo). Ver R-20. |
 | P-20 | Etiqueta de comodidades (**excepción a la regla web**) | "Todas nuestras habitaciones cuentan con:" (mobile); ícono rotulado "WiFi". Ver R-11. |
+| P-21 | Enlaces del footer | Instagram abre `instagram_url`; el teléfono abre `whatsapp_url`; la dirección es texto. Origen: clarificación Q-07 de `specs/001-sitio-casacosta` (1.3.0). Ver R-03, R-20. |
 
 ### Contenido confirmado para `seed.sql`
 
@@ -536,6 +571,7 @@ const row = getPlanBySlug.get(slug); // undefined → 404
 - **Reseñas** (5 estrellas, fecha `2025-10-10`): Daniela "EXCELENTE", Gabriela "INCREÍBLE",
   Samuel "PERFECTO".
 - **Calificaciones:** GOOGLE 4.7 / 5; BOOKING 9.0 / 10.
+- **Configuración:** `instagram_url` = `https://www.instagram.com/hotelcasacosta_/`.
 - **FAQs** (en este orden):
   1. "¿En Capurganá hay aeropuerto?" → "Sí. Puedes llegar en vuelo directo desde el aeropuerto
      Olaya Herrera de Medellín, en aproximadamente 1,5 horas. Si prefieres, también puedes
@@ -579,6 +615,17 @@ const row = getPlanBySlug.get(slug); // undefined → 404
   Principios I–VII; cada `spec.md` DEBE citar las reglas R-xx que aplica y las P-xx que
   resuelve o deja abiertas; toda revisión de código verifica: ausencia de ORM, SQL
   parametrizado, uso exclusivo de tokens de diseño, ausencia de funcionalidades fuera de
-  alcance y respuestas HTTP conformes.
+  alcance y respuestas HTTP conformes; y toda pantalla se verifica visualmente contra su frame
+  de Figma en 393 px y 1456 px (FV-03, FV-07).
 
-**Version**: 1.1.1 | **Ratified**: 2026-10-13 | **Last Amended**: 2026-10-13
+### Historial de enmiendas
+
+| Versión | Fecha | Tipo | Resumen |
+|---|---|---|---|
+| 1.0.0 | 2026-10-13 | Ratificación | Principios I–VII, reglas R-01…R-18, esquema y contrato de API, preguntas P-01…P-17. |
+| 1.1.0 | 2026-10-13 | MINOR | Se resuelven P-01…P-20 con evidencia de Figma; regla web; R-19…R-22; token `surface`; radios por componente; Vite. |
+| 1.1.1 | 2026-10-13 | PATCH | Se cierran P-10 (3 FAQs con respuesta) y P-14 (introducción de Comodidades). |
+| 1.2.0 | 2026-10-13 | MINOR | Nueva sección "Fidelidad Visual al Diseño" (FV-01…FV-07), incorporada al Principio VII y a la revisión de cumplimiento. |
+| 1.3.0 | 2026-10-13 | MINOR | Nueva clave `instagram_url`; R-03 y R-20 incluyen los enlaces del footer (P-21). |
+
+**Version**: 1.3.0 | **Ratified**: 2026-10-13 | **Last Amended**: 2026-10-13
