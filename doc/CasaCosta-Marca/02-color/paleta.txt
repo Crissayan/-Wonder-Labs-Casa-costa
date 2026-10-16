@@ -1,0 +1,14 @@
+Navy	#1A364F	Texto, fondos, íconos
+Blanco	#FFFFFF	Fondos
+Sol	#FAB53F	Botones y CTA
+Cyan 500	#3DBCD5	Detalles
+Cyan 400	#6AC6DE	Detalles
+Cyan 200	#A0D7E8	Detalles
+Teal	#67C1BD	Detalles
+
+Observados en el toolkit:
+Navy profundo (footer)	#1C3149
+Navy suave (botón FAQ)	#2F4670
+Superficie (tarjetas)	#EFEFEF
+Placeholder	#D9D9D9
+Tinte de marca	#D0E9F2

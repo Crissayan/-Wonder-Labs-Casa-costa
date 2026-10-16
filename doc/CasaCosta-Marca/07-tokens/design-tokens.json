@@ -1,0 +1,200 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "color": {
+    "primary": {
+      "navy": {
+        "$value": "#1A364F",
+        "$description": "Texto, fondos e íconos"
+      },
+      "white": {
+        "$value": "#FFFFFF"
+      },
+      "sun": {
+        "$value": "#FAB53F",
+        "$description": "Botones y CTA"
+      }
+    },
+    "secondary": {
+      "cyan-500": {
+        "$value": "#3DBCD5"
+      },
+      "cyan-400": {
+        "$value": "#6AC6DE"
+      },
+      "cyan-200": {
+        "$value": "#A0D7E8"
+      },
+      "teal": {
+        "$value": "#67C1BD"
+      }
+    },
+    "observed": {
+      "navy-deep": {
+        "$value": "#1C3149",
+        "$description": "Footer"
+      },
+      "navy-soft": {
+        "$value": "#2F4670",
+        "$description": "Botón FAQ"
+      },
+      "surface": {
+        "$value": "#EFEFEF",
+        "$description": "Tarjetas/FAQ"
+      },
+      "placeholder": {
+        "$value": "#D9D9D9"
+      },
+      "tint": {
+        "$value": "#D0E9F2"
+      },
+      "whatsapp": {
+        "$value": "#64AC4D"
+      }
+    }
+  },
+  "font": {
+    "family": {
+      "primary": {
+        "$value": "Nunito"
+      },
+      "secondary": {
+        "$value": "Inter"
+      }
+    },
+    "size": {
+      "desktop": {
+        "title": 64,
+        "subtitle": 48,
+        "heading": 36,
+        "button": 30,
+        "caption": 26,
+        "body": 22
+      },
+      "mobile": {
+        "title": 28,
+        "subtitle": 24,
+        "heading": 20,
+        "button": 12,
+        "caption": 12,
+        "body": 12
+      }
+    }
+  },
+  "radius": {
+    "image": 15,
+    "info": 10,
+    "pill": 999
+  },
+  "spacing": {
+    "section-desktop": 50,
+    "faq-gap-desktop": 38,
+    "faq-gap-mobile": 10,
+    "review-gap": 20
+  },
+  "grid": {
+    "desktop": {
+      "columns": 8,
+      "margin": 80,
+      "gutter": 24,
+      "rows": 4,
+      "rowGutter": 20
+    },
+    "mobile": {
+      "columns": 5,
+      "margin": 30,
+      "gutter": 16,
+      "rows": 6,
+      "rowGutter": 20
+    }
+  },
+  "opacity": {
+    "popup-overlay": 0.95,
+    "carousel-side": 0.5
+  },
+  "size": {
+    "hero": {
+      "desktop": [
+        1456,
+        676
+      ],
+      "mobile": [
+        393,
+        489
+      ]
+    },
+    "banner": {
+      "desktop": [
+        1456,
+        402
+      ],
+      "mobile": [
+        393,
+        172
+      ]
+    },
+    "rooms": {
+      "desktop": [
+        1350,
+        660
+      ],
+      "mobile": [
+        329,
+        316
+      ]
+    },
+    "carousel": {
+      "desktop": [
+        1360,
+        640
+      ],
+      "desktop-alt": [
+        1310,
+        940
+      ],
+      "mobile": [
+        [
+          314,
+          308
+        ],
+        [
+          335,
+          225
+        ],
+        [
+          315,
+          310
+        ]
+      ]
+    },
+    "popup": {
+      "desktop": [
+        916,
+        1606
+      ],
+      "mobile": [
+        352,
+        606
+      ]
+    },
+    "reviews": {
+      "desktop": [
+        1125,
+        512
+      ],
+      "mobile": [
+        372,
+        453
+      ]
+    },
+    "faq": {
+      "desktop": [
+        1319,
+        316
+      ],
+      "mobile": [
+        380,
+        387
+      ]
+    }
+  }
+}
