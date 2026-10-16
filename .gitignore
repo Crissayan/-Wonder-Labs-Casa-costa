@@ -13,3 +13,5 @@ Thumbs.db
 *.tmp
 .vscode/
 .idea/
+
+*.fig
