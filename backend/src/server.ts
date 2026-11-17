@@ -1,4 +1,5 @@
 import express, { type ErrorRequestHandler } from 'express';
+import cors from 'cors';
 import { existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { contactoRouter } from './routes/contacto.js';
@@ -13,6 +14,7 @@ export const createApp = () => {
   const app = express();
   app.disable('x-powered-by');
   app.set('json spaces', 0);
+  app.use(cors());
 
   app.use('/api', (_req, res, next) => {
     res.type('application/json; charset=utf-8');
@@ -58,6 +60,6 @@ const isMain = process.argv[1] && fileURLToPath(import.meta.url) === process.arg
 if (isMain) {
   const port = Number(process.env.PORT ?? 3001);
   createApp().listen(port, () => {
-    console.log(`API de Casa Costa en http://localhost:${port}`);
+    console.log(`API de Casa Costa en puerto:${port}`);
   });
 }
