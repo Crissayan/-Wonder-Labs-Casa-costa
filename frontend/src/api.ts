@@ -1,6 +1,7 @@
 import type { ApiError } from '@api/types';
 import { mensajes } from './messages';
 
+
 export class ApiRequestError extends Error {
   constructor(
     public readonly status: number,
@@ -13,8 +14,9 @@ export class ApiRequestError extends Error {
 // Petición tipada a la API. Cualquier fallo se convierte en ApiRequestError con mensaje amigable.
 export const apiGet = async <T>(path: string, signal?: AbortSignal): Promise<T> => {
   let response: Response;
+  const API_URL = import.meta.env.VITE_API_URL || "https://wonder-labs-casa-costa.onrender.com";
   try {
-    response = await fetch(`/api${path}`, { signal, headers: { Accept: 'application/json' } });
+    response = await fetch(`${API_URL}/api${path}`, { signal, headers: { Accept: 'application/json' } });
   } catch (error) {
     if (error instanceof DOMException && error.name === 'AbortError') throw error;
     throw new ApiRequestError(0, 'NETWORK');
